@@ -1,6 +1,11 @@
 {
   "name": "g7thub",
   "version": "0.1.0",
+  "author": {
+    "name": "th7mo",
+    "email": "dev@th7mo.com",
+    "url": "https://th7mo.com"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
