@@ -1,5 +1,4 @@
 import { Repo } from './Repo'
-import RepoTopicLabel from './TopicLabel'
 import RepoTopicList from './TopicList'
 import RepoUpdateDate from './UpdateDate'
 import RepoVisiblityLabel from './VisibilityLabel'
