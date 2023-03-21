@@ -21,7 +21,7 @@ const RepoList: React.FC<Props> = ({ username }) => {
   if (isLoading) return <p>Loading repositories...</p>
 
   return (
-    <ul>
+    <ul className="">
       {repos.map((repo: Repo) => (
         <RepoListItem repo={repo} key={repo.id} />
       ))}

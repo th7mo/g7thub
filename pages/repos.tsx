@@ -3,10 +3,10 @@ import Header from '@/components/shared/Header'
 
 const ReposPage = () => {
   return (
-    <>
+    <main className="m-4 flex flex-col gap-4">
       <Header name="Repositories" />
-      <RepoList username="th7mo" />
-    </>
+      <RepoList username="m7to" />
+    </main>
   )
 }
 
