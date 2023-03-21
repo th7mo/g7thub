@@ -9,6 +9,7 @@ export async function getUserRepos(username: string): Promise<Repo[]> {
   const repos: Repo[] = []
   const response = await octokit.request('GET /users/{username}/repos', {
     username,
+    sort: 'updated',
   })
   for (const repo of response.data) {
     repos.push({ ...repo })
