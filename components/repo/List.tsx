@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import RepoListItem from './ListItem'
+import RepoListItemSkeleton from './ListItemSkeleton'
 import { Repo } from './Repo'
 import { getUserRepos } from './RepoService'
 
@@ -18,10 +19,18 @@ const RepoList: React.FC<Props> = ({ username }) => {
     })
   }, [])
 
-  if (isLoading) return <p>Loading repositories...</p>
+  if (!repos || isLoading) {
+    return (
+      <ul>
+        <RepoListItemSkeleton />
+        <RepoListItemSkeleton />
+        <RepoListItemSkeleton />
+      </ul>
+    )
+  }
 
   return (
-    <ul className="">
+    <ul>
       {repos.map((repo: Repo) => (
         <RepoListItem repo={repo} key={repo.id} />
       ))}

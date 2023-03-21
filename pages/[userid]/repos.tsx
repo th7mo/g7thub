@@ -1,4 +1,6 @@
+import RepoHeaderSkeleton from '@/components/repo/HeaderSkeleton'
 import RepoList from '@/components/repo/List'
+import RepoListItemSkeleton from '@/components/repo/ListItemSkeleton'
 import Header from '@/components/shared/Header'
 import UserProfilePicture from '@/components/user/ProfilePicture'
 import { User } from '@/components/user/User'
@@ -25,7 +27,17 @@ const ReposPage = () => {
     })
   }, [userid])
 
-  if (isLoading || !user) return <Header name="Loading Repositories"></Header>
+  if (!user || isLoading)
+    return (
+      <main className="m-4 flex flex-col gap-4">
+        <RepoHeaderSkeleton />
+        <ul>
+          <RepoListItemSkeleton />
+          <RepoListItemSkeleton />
+          <RepoListItemSkeleton />
+        </ul>
+      </main>
+    )
 
   return (
     <>
