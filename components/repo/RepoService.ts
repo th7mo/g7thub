@@ -14,7 +14,5 @@ export async function getUserRepos(username: string): Promise<Repo[]> {
   for (const repo of response.data) {
     repos.push({ ...repo })
   }
-  console.log(repos)
-
   return repos
 }

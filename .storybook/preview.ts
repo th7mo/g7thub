@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import './styles.css'
 
 import type { Preview } from '@storybook/react'
 

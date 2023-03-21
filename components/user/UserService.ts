@@ -13,7 +13,7 @@ export async function getUser(username: string): Promise<User> {
   })
   user = { ...response.data }
 
-  console.log(user)
+  console.log('service: ' + user)
 
   return user
 }
