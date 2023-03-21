@@ -5,7 +5,7 @@ const ReposPage = () => {
   return (
     <main className="m-4 flex flex-col gap-4">
       <Header name="Repositories" />
-      <RepoList username="m7to" />
+      <RepoList username="abcdan" />
     </main>
   )
 }

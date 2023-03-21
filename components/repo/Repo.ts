@@ -5,4 +5,6 @@ export interface Repo {
   description: string | null
   topics?: string[]
   visibility?: string
+  language?: string | null
+  updated_at?: string | null
 }
